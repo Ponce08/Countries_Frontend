@@ -12,7 +12,7 @@ const Welcome = ()=>{
 
     const addCountriesBDD = async()=>{
         try {
-            await axios.post('http://localhost:3001/countries/add')
+            await axios.post('/countries/add')
         } catch (error) {
             throw Error(error.message)
         }

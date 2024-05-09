@@ -5,7 +5,7 @@ import { funcionOrderAndFilterCountry } from "./utils/utils";
 export const all_Countries = ()=>{
     return async(dispatch)=>{
         try {
-            const { data } = await axios.get('http://localhost:3001/countries');
+            const { data } = await axios.get('/countries');
 
             return dispatch({
                 type:ALL_COUNTRIES,
@@ -21,7 +21,7 @@ export const all_Countries = ()=>{
 export const countryById = (id)=>{
     return async(dispatch)=>{
         try {
-            const { data } = await axios.get(`http://localhost:3001/countries/${id}`);
+            const { data } = await axios.get(`/countries/${id}`);
 
             return dispatch({
                 type:COUNTRY_BY_ID,
@@ -37,7 +37,7 @@ export const countryById = (id)=>{
 export const getCountryByName = (name)=>{
     return async(dispatch)=>{
         try {
-            const { data } = await axios.get(`http://localhost:3001/countries?name=${name}`);
+            const { data } = await axios.get(`/countries?name=${name}`);
 
             return dispatch({
                 type:GET_NAME_COUNTRY,
@@ -72,7 +72,7 @@ export const stateNull = ()=>{
 export const postActivity = (activityData)=>{
     return async(dispatch)=>{
         try {
-            const { data } = await axios.post(`http://localhost:3001/countries/post_activity`, activityData);
+            const { data } = await axios.post('/countries/post_activity', activityData);
 
             return dispatch({
                 type:POST_ACTIVITY,
