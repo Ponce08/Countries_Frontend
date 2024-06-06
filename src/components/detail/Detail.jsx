@@ -51,13 +51,13 @@ const Detail = () => {
           <h3>
             POBLACION: <h4>{countryID?.population}</h4>
           </h3>
+        </div>
+      </div>
           <div className="content_button">
             <Link to={'/home'}>
               <button>Home</button>
             </Link>
           </div>
-        </div>
-      </div>
     </div>
   );
 };

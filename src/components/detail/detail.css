@@ -10,7 +10,7 @@
     font-size: 30px;
     
     img{
-        height: 400px
+        height: 350px
         }
         
     h3{
@@ -26,16 +26,20 @@
 
 .img_flag{
     width: auto;
-    
+    margin-top: 25px;
 }
 
 .content_date{
     display: flex;
     justify-content: center;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
     div{
         margin-left: 30px;
     }
+}
+
+.content_button{
+    margin-bottom: 25px;
 }
 
 

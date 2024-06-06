@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-around;
+    justify-items: center;
     align-items: center;
     gap: 80px;
     position: fixed;
@@ -49,7 +50,7 @@
 .content_crear_actividad{
     height: 50px;
     button{
-        margin-left: 50px;
+        margin-left: 20px;
         width: 200px;
         font-family: 'Courier New', Courier, monospace;
         font-size: 16px;
