@@ -3,7 +3,7 @@ import axios from "axios";
 export const funcionOrderAndFilterCountry = async(value)=>{
     
     try {
-        const { data } = await axios.get(`https://countriesback-production-83ab.up.railway.app/`);
+        const { data } = await axios.get(`https://countriesback-production-83ab.up.railway.app/countries`);
 
         if(value === "De la A-Z"){
             const countriesOrdered_AZ = data.sort((a, b)=>{ 
