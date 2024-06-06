@@ -2,17 +2,26 @@ body{
     margin: 0;
     background-color: #B6F0F9;
     font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
 
 .content_countries{
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+   padding-top: 120px;
+   display: grid;
+   margin: 0px 20px 20px 20px;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 20px;
+}
+
+@media(width < 835px){
+    .content_countries{
+        padding-top: 220px;
+    }
 }
 
 .cont_button{
-    margin: 10px 0 10px 600px;
+    display: flex;
+    justify-content: center;
     .button_home2{
         margin: 10px;
         height: 50px;
@@ -33,7 +42,8 @@ body{
     }
 }
 .cont_button2{
-    margin: 10px 0 10px 600px;
+    display: flex;
+    justify-content: center;
     .button_home1{
         margin: 10px;
         height: 50px;

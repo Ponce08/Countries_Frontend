@@ -11,32 +11,37 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const [inicio, setInicio] = useState(0);
-  const [final, setFinal] = useState(10);
+  const [final, setFinal] = useState(12);
   const [nameCountry, setNameCountry] = useState('');
 
   // Control paginado
   let countriesAll = allCountries.slice(inicio, final);
   const previous_page = () => {
     if (inicio > 0) {
-      setInicio(inicio - 10);
-      setFinal(final - 10);
+      setInicio(inicio - 12);
+      setFinal(final - 12);
       countriesAll = allCountries.slice(inicio, final);
     }
   };
 
   const next_page = () => {
     if (final < 251) {
-      setInicio(inicio + 10);
-      setFinal(final + 10);
+      setInicio(inicio + 12);
+      setFinal(final + 12);
       countriesAll = allCountries.slice(inicio, final);
     }
   };
 
   // Buscar por nombre
-  const handleInput = () => {
-    setNameCountry('');
-    setInicio(0);
-    setFinal(10);
+  const handleInput = (event) => {
+    setNameCountry(event.target.value);
+    dispatch(getCountryByName(nameCountry));
+
+    if(event.target.value === ''){
+      dispatch(all_Countries())
+      setInicio(0);
+      setFinal(12);
+    }
   };
 
   // Orden y Filtrado
@@ -44,22 +49,16 @@ const Home = () => {
     dispatch(orderAndFilterCountry(event.target.value));
     event.target.value = '';
     setInicio(0);
-    setFinal(10);
+    setFinal(12);
   };
 
   return (
     <div>
       <Navegation
         find_By_name={
-          <div className="content_buscar">
-            <button onClick={handleInput}>Buscar</button>
-            <input
-              type="text"
-              value={nameCountry}
-              onChange={(event) => {
-                setNameCountry(event.target.value), dispatch(getCountryByName(nameCountry));
-              }}
-            />
+          <div className='content_buscar'>
+            <label>🔎</label>
+            <input type="text" value={nameCountry} onChange={handleInput} />
           </div>
         }
         crear_actividad={
@@ -137,7 +136,7 @@ const Home = () => {
               onClick={() => {
                 dispatch(all_Countries());
                 setInicio(0);
-                setFinal(10);
+                setFinal(12);
               }}
             >
               Atras

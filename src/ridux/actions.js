@@ -45,7 +45,7 @@ export const getCountryByName = (name)=>{
             })
             
         } catch (error) {
-            alert(`El nombre del pais ${name} no se encuentra en la base de datos, intenta con otro`)
+            throw Error(error.message)
         }
     }
 };
