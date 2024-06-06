@@ -1,39 +1,18 @@
 .content_detail{
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.5)),  url('./fondo_detail.jpg');
+    background-size: cover;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    font-size: 30px;
-    position: relative;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    font-size: 30px;
     
-    .content_date{
-        display: flex;
-        margin: 10px 0 0 0;
-        z-index: 2;
-        div{
-            margin-left: 50px;
-        }
-        h3{
-            margin: 0;
-            h3{
-                color: purple;
-                font-size: 40px;
-                font-weight: bold;
-                display: inline-block;
-                margin: 0;
-            }
-        }
-    }
-
-    .img_flag{
-        z-index: 2;
-        margin-top: 20px;
-    }
-
     img{
-        height: 400px;
-    }
-
+        height: 400px
+        }
+        
     h3{
         margin: 0;
         font-weight: bold;
@@ -45,12 +24,68 @@
     }
 }
 
-.img_detail img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 50%;
+.img_flag{
+    width: auto;
+    
+}
+
+.content_date{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    div{
+        margin-left: 30px;
+    }
+}
+
+
+
+@media(width < 1100px){
+    .img_flag img{
+        height: 300px;
+        width: auto;
+    }
+    .content_date div{
+        font-size: 0.8em;
+    }
+}
+
+@media(width < 935px){
+    .img_flag img{
+        height: 280px;
+        width: auto;
+    }
+    .content_date div{
+        font-size: 0.6em;
+    }
+}
+
+@media(width < 702px){
+    .img_flag img{
+        height: 240px;
+        width: auto;
+    }
+    .content_date div{
+        font-size: 0.4em;
+    }
+}
+
+@media(width < 490px){
+    .img_flag img{
+        height: 220px;
+        width: auto;
+    }
+    .content_date div{
+        font-size: 0.4em;
+    }
+}
+
+@media(width < 400px){
+    .img_flag img{
+        height: 200px;
+        width: auto;
+    }
+    .content_date div{
+        font-size: 0.3em;
+    }
 }
