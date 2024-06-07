@@ -172,3 +172,30 @@
         margin: 0;
     }
 }
+
+@media(width < 400px){
+    .content_h1 h1{
+       font-size: small;
+    }
+    .input_name{
+        width: 200px;
+    }
+    .content_data1{
+        align-items: center;
+    }
+    .content_data2{
+        align-items: center;
+    }
+    .content_select select{
+        width: 200px;
+    }
+    .Dificulty_content{
+        display: flex;
+        width: 200px;
+        margin-bottom: 5px;
+    }
+    .Duration_content{
+        display: flex;
+        width: 200px;
+    }
+}

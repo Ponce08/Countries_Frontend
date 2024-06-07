@@ -96,7 +96,7 @@ const Form = () => {
                   <p></p>
                 </div>
               )}
-              <div>
+              <div className='Dificulty_content'>
                 <label htmlFor="dificulty" className="label_number1">
                   Dificultad:
                 </label>
@@ -111,7 +111,7 @@ const Form = () => {
                   </div>
                 )}
               </div>
-              <div>
+              <div className='Duration_content'>
                 <label htmlFor="duration" className="label_number2">
                   Duracion(Horas):
                 </label>
