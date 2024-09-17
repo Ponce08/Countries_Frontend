@@ -1,26 +1,26 @@
 import './welcome.css';
 import fondo_welcome from './banderas-del-mundo-tapa.jpg'
 import { Link } from 'react-router-dom';
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import axios from 'axios';
+// import axios from 'axios';
 import { all_Countries } from '../../ridux/actions';
 
 const Welcome = ()=>{
 
     const dispatch = useDispatch();
 
-    const addCountriesBDD = async()=>{
-        try {
-            await axios.post('/countries/add')
-        } catch (error) {
-            throw Error(error.message)
-        }
-    };
+    // const addCountriesBDD = async()=>{
+    //     try {
+    //         await axios.post('/countries/add')
+    //     } catch (error) {
+    //         throw Error(error.message)
+    //     }
+    // };
     
-    useEffect(()=>{
-        addCountriesBDD()
-    }, []);
+    // useEffect(()=>{
+    //     addCountriesBDD()
+    // }, []);
 
     return(
         <div className='content_welcome'>
