@@ -1,5 +1,4 @@
 import './form.css';
-import fondo_form from './fondo_form.jpg';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -96,7 +95,7 @@ const Form = () => {
                   <p></p>
                 </div>
               )}
-              <div className='Dificulty_content'>
+              <div className="Dificulty_content">
                 <label htmlFor="dificulty" className="label_number1">
                   Dificultad:
                 </label>
@@ -111,7 +110,7 @@ const Form = () => {
                   </div>
                 )}
               </div>
-              <div className='Duration_content'>
+              <div className="Duration_content">
                 <label htmlFor="duration" className="label_number2">
                   Duracion(Horas):
                 </label>
@@ -219,10 +218,6 @@ const Form = () => {
               </div>
             </div>
           </form>
-
-          <div className="img_form">
-            <img src={fondo_form} alt="fondo_form" />
-          </div>
         </div>
       ) : (
         <div>

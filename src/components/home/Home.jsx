@@ -1,6 +1,6 @@
 import './home.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { all_Countries, getCountryByName, orderAndFilterCountry } from '../../ridux/actions';
 import Countries from '../countries/Countries';
@@ -13,6 +13,10 @@ const Home = () => {
   const [inicio, setInicio] = useState(0);
   const [final, setFinal] = useState(12);
   const [nameCountry, setNameCountry] = useState('');
+
+  useEffect(() => {
+    dispatch(all_Countries());
+  }, []);
 
   // Control paginado
   let countriesAll = allCountries.slice(inicio, final);
@@ -37,8 +41,8 @@ const Home = () => {
     setNameCountry(event.target.value);
     dispatch(getCountryByName(nameCountry));
 
-    if(event.target.value === ''){
-      dispatch(all_Countries())
+    if (event.target.value === '') {
+      dispatch(all_Countries());
       setInicio(0);
       setFinal(12);
     }
@@ -56,7 +60,7 @@ const Home = () => {
     <div>
       <Navegation
         find_By_name={
-          <div className='content_buscar'>
+          <div className="content_buscar">
             <label>🔎</label>
             <input type="text" value={nameCountry} onChange={handleInput} />
           </div>

@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background-color: #b6f0f9;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
